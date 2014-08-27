@@ -1,0 +1,17 @@
+#include <QCoreApplication>
+#include <iostream>
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
+    int n=10;
+mylabel:
+    cout<<n<<", ";
+    n--;
+
+    if (n>0) goto mylabel;
+    cout<<"liftoff!\n";
+
+    return a.exec();
+}
